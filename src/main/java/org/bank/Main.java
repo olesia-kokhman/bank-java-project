@@ -1,9 +1,9 @@
 package org.bank;
 
-import org.bank.core.AccountCurrency;
 import org.bank.core.BankAccount;
-import org.bank.core.StatisticsGenerator;
+import org.bank.statistics_generation.StatisticsGenerator;
 import org.bank.parsing.JSONBankAccountParser;
+import org.bank.statistics_generation.XMLStatisticsParser;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -25,11 +25,10 @@ public class Main {
             }
         }
 
+        String xmlFilePath = "C:\\internship\\statistics\\statistics_by_currency.xml";
+
         StatisticsGenerator generator = new StatisticsGenerator(allBankAccounts);
-        List<Integer> currencyList = generator.generateStatisticsByCurrency();
-        for (Integer currencyCountNumber: currencyList) {
-            System.out.println(currencyCountNumber);
-        }
+        XMLStatisticsParser.parseStatisticsToXML(xmlFilePath, generator.generateStatisticsByCurrency());
 
     }
 }

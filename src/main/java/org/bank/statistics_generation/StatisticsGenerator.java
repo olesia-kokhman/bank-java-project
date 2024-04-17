@@ -1,7 +1,11 @@
-package org.bank.core;
+package org.bank.statistics_generation;
 
-import java.util.ArrayList;
+import org.bank.core.AccountCurrency;
+import org.bank.core.BankAccount;
+
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class StatisticsGenerator {
 
@@ -11,7 +15,7 @@ public class StatisticsGenerator {
         this.bankAccounts = bankAccounts; // ???
     }
 
-    public List<Integer> generateStatisticsByCurrency() {
+    public Map<String, Integer> generateStatisticsByCurrency() {
         int counterUAN = 0;
         int counterUSD = 0;
         int counterEURO = 0;
@@ -26,12 +30,12 @@ public class StatisticsGenerator {
             }
         }
 
-        List<Integer> currencyList = new ArrayList<>(3);
-        currencyList.add(counterUAN);
-        currencyList.add(counterUSD);
-        currencyList.add(counterEURO);
+        Map<String, Integer> currencyInfo = new HashMap<>();
+        currencyInfo.put(AccountCurrency.UAN.name(), counterUAN);
+        currencyInfo.put(AccountCurrency.USD.name(), counterUSD);
+        currencyInfo.put(AccountCurrency.EURO.name(), counterEURO);
 
-        return currencyList;
+        return currencyInfo;
     }
 
 
