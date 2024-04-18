@@ -11,7 +11,11 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        String directoryFilePath = "C:\\internship\\bank-account-files-in-json\\";
+
+        String directoryFilePath = args[0];
+        String statisticsAttribute = args[1]; // check for the correctness of arguments
+
+        //String directoryFilePath = "C:\\internship\\bank-account-files-in-json\\";
 
         File directory = new File(directoryFilePath);
         File[] files = directory.listFiles();
@@ -25,10 +29,26 @@ public class Main {
             }
         }
 
-        String xmlFilePath = "C:\\internship\\statistics\\statistics_by_categories.xml";
 
         StatisticsGenerator generator = new StatisticsGenerator(allBankAccounts);
-        XMLStatisticsParser.parseStatisticsToXML(xmlFilePath, generator.generateStatisticsByCategories());
+        String xmlFilePath = String.format("C:\\internship\\statistics\\statistics_by_%s.xml", statisticsAttribute);
+
+        switch (statisticsAttribute) {
+            case "currency":
+                XMLStatisticsParser.parseStatisticsToXML(xmlFilePath, generator.generateStatisticsByCurrency());
+                break;
+            case "is_available_credit_limit":
+                XMLStatisticsParser.parseStatisticsToXML(xmlFilePath, generator.generateStatisticsByIsAvailableCreditLimit());
+                break;
+            case "credit_limit":
+                XMLStatisticsParser.parseStatisticsToXML(xmlFilePath, generator.generateStatisticsByCreditLimit());
+                break;
+            case "categories":
+                XMLStatisticsParser.parseStatisticsToXML(xmlFilePath, generator.generateStatisticsByCategories());
+                break;
+            default:
+                throw new IllegalArgumentException("Unexpected value: " + statisticsAttribute);
+        }
 
     }
 }

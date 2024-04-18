@@ -17,4 +17,8 @@ public class StatisticsItem {
     }
 
     public StatisticsItem() {};
+
+    public int getCount() {
+        return count;
+    }
 }

@@ -3,14 +3,12 @@ package org.bank.statistics_generation;
 import org.bank.core.AccountCurrency;
 import org.bank.core.BankAccount;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class StatisticsGenerator {
 
-    List<BankAccount> bankAccounts;
+    private final List<BankAccount> bankAccounts;
 
     public StatisticsGenerator(List<BankAccount> bankAccounts) {
         this.bankAccounts = bankAccounts; // ???
