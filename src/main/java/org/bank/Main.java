@@ -25,10 +25,10 @@ public class Main {
             }
         }
 
-        String xmlFilePath = "C:\\internship\\statistics\\statistics_by_currency.xml";
+        String xmlFilePath = "C:\\internship\\statistics\\statistics_by_categories.xml";
 
         StatisticsGenerator generator = new StatisticsGenerator(allBankAccounts);
-        XMLStatisticsParser.parseStatisticsToXML(xmlFilePath, generator.generateStatisticsByCurrency());
+        XMLStatisticsParser.parseStatisticsToXML(xmlFilePath, generator.generateStatisticsByCategories());
 
     }
 }

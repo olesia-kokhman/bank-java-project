@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e3426aa-e1b8-4bb1-a90e-ff990da484ee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/StatisticsData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/StatisticsItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/XMLStatisticsParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/core/StatisticsGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/StatisticsGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/core/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/core/BankAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/file_generation/BankAccountFaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/file_generation/BankAccountFaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/StatisticsGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/StatisticsGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,22 +87,11 @@
       <updated>1712186632909</updated>
       <workItem from="1712186633730" duration="300000" />
       <workItem from="1713297324195" duration="15178000" />
-      <workItem from="1713375619004" duration="12443000" />
+      <workItem from="1713375619004" duration="20628000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/bank/Main.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
