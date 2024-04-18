@@ -1,35 +1,41 @@
 package org.bank;
 
 import org.bank.core.BankAccount;
-import org.bank.statistics_generation.StatisticsGenerator;
+import org.bank.core.BankAccountFilesExecutor;
+import org.bank.file_generation.BankAccountFaker;
 import org.bank.parsing.JSONBankAccountParser;
+import org.bank.statistics_generation.StatisticsGenerator;
 import org.bank.statistics_generation.XMLStatisticsParser;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Main {
     public static void main(String[] args) {
 
         String directoryFilePath = args[0];
-        String statisticsAttribute = args[1]; // check for the correctness of arguments
+        String statisticsAttribute = args[1];
 
+        List<String> fullPathFiles = new ArrayList<>();
         File directory = new File(directoryFilePath);
         File[] files = directory.listFiles();
-        List<BankAccount> allBankAccounts = new ArrayList<>();
 
-        if(files != null) {
-            for(File file: files) {
-                List<BankAccount> parsedBankAccounts = JSONBankAccountParser.parseJSON2BankAccountList2(
-                        directoryFilePath + file.getName());
-                allBankAccounts.addAll(parsedBankAccounts);
-            }
+        if(files == null) {
+            throw new NullPointerException();
         }
 
+        for(File file: files) {
+            fullPathFiles.add(directoryFilePath + file.getName());
+        }
+
+        CopyOnWriteArrayList<BankAccount> allBankAccounts = BankAccountFilesExecutor.load(8, fullPathFiles);
+
         StatisticsGenerator generator = new StatisticsGenerator(allBankAccounts);
-        String xmlFilePath = String.format("C:\\internship\\statistics\\statistics_by_%s.xml", statisticsAttribute);
+        String xmlFilePath = String.format("./src//main/resources/statistics_by_%s.xml", statisticsAttribute);
 
         switch (statisticsAttribute) {
             case "currency":
@@ -49,4 +55,5 @@ public class Main {
         }
 
     }
+
 }

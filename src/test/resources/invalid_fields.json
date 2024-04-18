@@ -1,0 +1,18 @@
+[
+  {
+    "account_number_invalid": "3785720590850052",
+    "balance": 2356.46,
+    "currency1": "EURO",
+    "categories": "electronics, digital",
+    "credit_limit": 61600,
+    "is_available_credit_limit": false
+  },
+  {
+    "account_number": "5466958511471271",
+    "balance": 14329.87,
+    "currency": "UAN",
+    "categories": "electronics",
+    "credit_limit": 29600,
+    "is_available_credit_limit": false
+  }
+]

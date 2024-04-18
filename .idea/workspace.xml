@@ -5,12 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e3426aa-e1b8-4bb1-a90e-ff990da484ee" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/bank/core/BankAccountFilesExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/file-0.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/file-1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/file-2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/file-3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/file-4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/file-5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/file-6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/file-7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/file-8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/file-9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/JSONBankAccountParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/StatisticsGeneratorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/invalid_fields.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/missing_fields.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/not_json_file.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/core/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/core/BankAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/file_generation/BankAccountFaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/file_generation/BankAccountFaker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/parsing/JSONBankAccountParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/parsing/JSONBankAccountParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/StatisticsData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/StatisticsData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/StatisticsGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/StatisticsGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/XMLStatisticsParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/XMLStatisticsParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,30 +57,36 @@
     </option>
   </component>
   <component name="ProjectId" id="2ebwXx2gT4pOOd44BU6rtknDzaM" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="Application.MainWithArguments">
     <configuration name="MainWithArguments" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="org.bank.Main" />
       <module name="bank-java-project" />
-      <option name="PROGRAM_PARAMETERS" value="C:\\internship\\bank-account-files-in-json\\ currency" />
+      <option name="PROGRAM_PARAMETERS" value="./src//main/resources/ currency" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.bank.*" />
@@ -73,9 +97,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JSONBankAccountParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bank-java-project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JSONBankAccountParserTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JSONBankAccountParserTest.testInvalidFields" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bank-java-project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JSONBankAccountParserTest" />
+      <option name="METHOD_NAME" value="testInvalidFields" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JSONBankAccountParserTest.testMissingFields" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bank-java-project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JSONBankAccountParserTest" />
+      <option name="METHOD_NAME" value="testMissingFields" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.MainWithArguments" />
+      <item itemvalue="JUnit.JSONBankAccountParserTest" />
+      <item itemvalue="JUnit.JSONBankAccountParserTest.testInvalidFields" />
+      <item itemvalue="JUnit.JSONBankAccountParserTest.testMissingFields" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainWithArguments" />
+        <item itemvalue="JUnit.JSONBankAccountParserTest" />
+        <item itemvalue="JUnit.JSONBankAccountParserTest.testInvalidFields" />
+        <item itemvalue="JUnit.JSONBankAccountParserTest.testMissingFields" />
       </list>
     </recent_temporary>
   </component>
@@ -90,11 +152,15 @@
       <workItem from="1712186633730" duration="300000" />
       <workItem from="1713297324195" duration="15178000" />
       <workItem from="1713375619004" duration="26471000" />
-      <workItem from="1713442345781" duration="7654000" />
+      <workItem from="1713442345781" duration="20164000" />
+      <workItem from="1713464726965" duration="6325000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

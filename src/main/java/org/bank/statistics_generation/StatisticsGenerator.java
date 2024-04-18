@@ -10,74 +10,59 @@ public class StatisticsGenerator {
     private final List<BankAccount> bankAccounts;
 
     public StatisticsGenerator(List<BankAccount> bankAccounts) {
-        this.bankAccounts = bankAccounts; // ???
+        this.bankAccounts = bankAccounts;
     }
 
     public Map<String, Integer> generateStatisticsByCurrency() {
-        int counterUAN = 0;
-        int counterUSD = 0;
-        int counterEURO = 0;
-        for(BankAccount account: bankAccounts) {
-            AccountCurrency currency = account.getCurrency();
-            if(currency == AccountCurrency.UAN) {
-                counterUAN++;
-            } else if (currency == AccountCurrency.USD) {
-                counterUSD++;
-            } else if (currency == AccountCurrency.EURO) {
-                counterEURO++;
-            }
+        Map<String, Integer> currencyInfo = new HashMap<>();
+
+        for (AccountCurrency currency : AccountCurrency.values()) {
+            currencyInfo.put(currency.name(), 0);
         }
 
-        Map<String, Integer> currencyInfo = new HashMap<>();
-        currencyInfo.put(AccountCurrency.UAN.name(), counterUAN);
-        currencyInfo.put(AccountCurrency.USD.name(), counterUSD);
-        currencyInfo.put(AccountCurrency.EURO.name(), counterEURO);
+        for (BankAccount account : bankAccounts) {
+            AccountCurrency currency = account.getCurrency();
+            currencyInfo.put(currency.name(), currencyInfo.get(currency.name()) + 1);
+        }
 
         return currencyInfo;
     }
 
     public Map<String, Integer> generateStatisticsByIsAvailableCreditLimit() {
-        int trueCounter = 0;
-        int falseCounter = 0;
+        Map<String, Integer> isAvailableCreditLimitInfo = new HashMap<>();
 
-        for(BankAccount account: bankAccounts) {
-            boolean accountIsAvailableCreditLimit = account.getIsAvailableCreditLimit();
-            if(accountIsAvailableCreditLimit) {
-                trueCounter++;
-            } else {
-                falseCounter++;
-            }
+        isAvailableCreditLimitInfo.put(String.valueOf(Boolean.TRUE), 0);
+        isAvailableCreditLimitInfo.put(String.valueOf(Boolean.FALSE), 0);
+
+        for (BankAccount account : bankAccounts) {
+
+
+            boolean isAvailableCreditLimit = account.getIsAvailableCreditLimit();
+            isAvailableCreditLimitInfo.put(String.valueOf(isAvailableCreditLimit),
+                    isAvailableCreditLimitInfo.get(String.valueOf(isAvailableCreditLimit)) + 1);
         }
 
-        Map<String, Integer> isAvailableCreditLimitInfo = new HashMap<>();
-        isAvailableCreditLimitInfo.put(String.valueOf(Boolean.TRUE), trueCounter);
-        isAvailableCreditLimitInfo.put(String.valueOf(Boolean.FALSE), falseCounter);
-
         return isAvailableCreditLimitInfo;
-
     }
 
     public Map<String, Integer> generateStatisticsByCreditLimit() {
-        int creditTakenCounter = 0;
-        int creditNotTakenCounter = 0;
+        int creditTakenCounter = (int) bankAccounts.stream()
+                .filter(account -> {
+                    double balance = account.getBalance();
+                    int creditLimit = account.getCreditLimit();
+                    boolean isAvailableCreditLimit = account.getIsAvailableCreditLimit();
+                    return isAvailableCreditLimit && (balance - creditLimit) < 0;
+                })
+                .count();
 
-        for (BankAccount account : bankAccounts) { // lambda
-            double balance = account.getBalance();
-            int creditLimit = account.getCreditLimit();
-            boolean isAvailableCreditLimit = account.getIsAvailableCreditLimit();
-
-            if (!isAvailableCreditLimit) {
-                creditNotTakenCounter++;
-            } else {
-                double realBalance = balance - creditLimit;
-
-                if (realBalance >= 0) {
-                    creditNotTakenCounter++;
-                } else {
-                    creditTakenCounter++;
-                }
-            }
-        }
+        int creditNotTakenCounter = (int) bankAccounts.stream()
+                .filter(account -> {
+                    double balance = account.getBalance();
+                    int creditLimit = account.getCreditLimit();
+                    boolean isAvailableCreditLimit = account.getIsAvailableCreditLimit();
+                    return !isAvailableCreditLimit || (balance - creditLimit) >= 0;
+                })
+                .count();
 
         Map<String, Integer> creditLimitInfo = new HashMap<>();
         creditLimitInfo.put("Credit is taken", creditTakenCounter);
@@ -93,9 +78,8 @@ public class StatisticsGenerator {
             String categories = account.getCategories();
             String[] splittedCategories = categories.split(", ");
 
-            for(int i = 0; i < splittedCategories.length; i++) {
-                String category = splittedCategories[i];
-                if(categoryInfo.containsKey(category)) {
+            for (String category : splittedCategories) {
+                if (categoryInfo.containsKey(category)) {
                     int counter = categoryInfo.get(category);
                     counter++;
                     categoryInfo.put(category, counter);
