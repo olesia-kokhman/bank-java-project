@@ -33,13 +33,13 @@ public class JSONBankAccountParserTest {
     }
 
     @Test
-    public void testGoodFieldsBabValues() {
+    public void testGoodFieldsBadValues() {
 
     }
 
     @Test
     public void testInvalidFileFormat() {
-        String filePath = "C:\\internship\\bank-java-project\\src\\test\\resources\\not_json_file.xml";
+
 
     }
 
@@ -54,7 +54,5 @@ public class JSONBankAccountParserTest {
     public void testNotValidJSONException() {
 
     }
-
-
 
 }

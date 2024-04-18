@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<statistics>
+    <item>
+        <value>USD</value>
+        <count>1921595561</count>
+    </item>
+    <item>
+        <value>UAN</value>
+        <count>930990596</count>
+    </item>
+    <item>
+        <value>EURO</value>
+        <count>565760380</count>
+    </item>
+</statistics>

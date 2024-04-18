@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e3426aa-e1b8-4bb1-a90e-ff990da484ee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/bad_currency.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/core/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/core/BankAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/parsing/JSONBankAccountParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/parsing/JSONBankAccountParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/StatisticsItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/StatisticsItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/statistics_by_currency.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/XMLStatisticsParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/XMLStatisticsParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/JSONBankAccountParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JSONBankAccountParserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,7 +135,7 @@
       <workItem from="1713297324195" duration="15178000" />
       <workItem from="1713375619004" duration="26471000" />
       <workItem from="1713442345781" duration="20164000" />
-      <workItem from="1713464726965" duration="7834000" />
+      <workItem from="1713464726965" duration="8947000" />
     </task>
     <servers />
   </component>

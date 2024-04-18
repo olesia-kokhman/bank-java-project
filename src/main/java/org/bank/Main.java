@@ -32,8 +32,8 @@ public class Main {
             fullPathFiles.add(directoryFilePath + file.getName());
         }
 
-        CopyOnWriteArrayList<BankAccount> allBankAccounts = BankAccountFilesExecutor.load(8, fullPathFiles);
 
+        CopyOnWriteArrayList<BankAccount> allBankAccounts = BankAccountFilesExecutor.load(8, fullPathFiles);
         StatisticsGenerator generator = new StatisticsGenerator(allBankAccounts);
         String xmlFilePath = String.format("./src//main/resources/statistics_by_%s.xml", statisticsAttribute);
 

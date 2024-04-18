@@ -22,6 +22,7 @@ public class XMLStatisticsParser {
             Marshaller marshaller = context.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
             marshaller.marshal(data, new File(filePath));
+            System.out.println("The statistics is located into java/resources directory!");
 
         } catch (JAXBException jaxbException) {
             jaxbException.printStackTrace();

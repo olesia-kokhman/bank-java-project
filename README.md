@@ -18,5 +18,11 @@ Other attributes include credit_limit, currency, and categories.
 
 ## Usage
 Once the project is set up and the configuration is selected, run the program.
-After execution, navigate to the java/resources directory in the project.
+After execution, navigate to the `java/resources` directory in the project.
 Here, you will find the generated XML file containing the statistics based on the selected attribute.
+
+## Multhreading test results
+1 thread - 0.3922013
+2 threads -0.0262523
+4 threads - 0.0213109
+8 threads - 0.0168894
