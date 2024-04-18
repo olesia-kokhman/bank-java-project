@@ -13,7 +13,7 @@ public class StatisticsItem {
 
     public StatisticsItem(String value, int count) {
         this.value = value;
-        this.count = hashCode();
+        this.count = count;
     }
 
     public StatisticsItem() {};
