@@ -18,10 +18,10 @@ public class BankAccount {
     private boolean isAvailableCreditLimit;
 
     @JsonCreator
-    public BankAccount(@JsonProperty("balance") double balance,
+    public BankAccount(@JsonProperty("account_number") String accountNumber,
+                       @JsonProperty("balance") double balance,
                        @JsonProperty("currency") AccountCurrency currency,
                        @JsonProperty("categories") String categories,
-                       @JsonProperty("account_number") String accountNumber,
                        @JsonProperty("credit_limit") int creditLimit,
                        @JsonProperty("is_available_credit_limit") boolean isAvailableCreditLimit) {
         this.accountNumber = accountNumber;

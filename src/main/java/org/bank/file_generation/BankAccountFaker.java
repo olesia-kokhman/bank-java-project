@@ -37,8 +37,8 @@ public class BankAccountFaker {
         int creditLimit = faker.random().nextInt(0, 1001) * 100;
         boolean isAvailableCreditLimit = faker.bool().bool();
 
-        return new BankAccount(balance, AccountCurrency.values()[currencyNumber],
-                categories, accountNumber, creditLimit, isAvailableCreditLimit);
+        return new BankAccount(accountNumber, balance, AccountCurrency.values()[currencyNumber],
+                categories, creditLimit, isAvailableCreditLimit);
     }
 
     private static String generateCategories() {

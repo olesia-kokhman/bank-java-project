@@ -4,7 +4,6 @@ import org.bank.core.AccountCurrency;
 import org.bank.core.BankAccount;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class StatisticsGenerator {
 

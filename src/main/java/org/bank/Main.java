@@ -6,6 +6,7 @@ import org.bank.parsing.JSONBankAccountParser;
 import org.bank.statistics_generation.XMLStatisticsParser;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,20 +16,17 @@ public class Main {
         String directoryFilePath = args[0];
         String statisticsAttribute = args[1]; // check for the correctness of arguments
 
-        //String directoryFilePath = "C:\\internship\\bank-account-files-in-json\\";
-
         File directory = new File(directoryFilePath);
         File[] files = directory.listFiles();
         List<BankAccount> allBankAccounts = new ArrayList<>();
 
         if(files != null) {
             for(File file: files) {
-                List<BankAccount> parsedBankAccounts = JSONBankAccountParser.parseJSON2BankAccountList(
+                List<BankAccount> parsedBankAccounts = JSONBankAccountParser.parseJSON2BankAccountList2(
                         directoryFilePath + file.getName());
                 allBankAccounts.addAll(parsedBankAccounts);
             }
         }
-
 
         StatisticsGenerator generator = new StatisticsGenerator(allBankAccounts);
         String xmlFilePath = String.format("C:\\internship\\statistics\\statistics_by_%s.xml", statisticsAttribute);
