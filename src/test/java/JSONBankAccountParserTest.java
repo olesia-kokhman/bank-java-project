@@ -11,7 +11,8 @@ public class JSONBankAccountParserTest {
 
     @Test
     public void testMissingFields() {
-        String filePath = "C:\\internship\\bank-java-project\\src\\test\\resources\\missing_fields.json";
+        String filePath = getClass().getResource("/missing_fields.json").getPath();
+
 
         List<BankAccount> bankAccounts = org.bank.parsing.JSONBankAccountParser.parseJSON2BankAccountList2(filePath);
 
@@ -22,7 +23,8 @@ public class JSONBankAccountParserTest {
 
     @Test
     public void testInvalidFields() {
-        String filePath = "C:\\internship\\bank-java-project\\src\\test\\resources\\invalid_fields.json";
+        String filePath = getClass().getResource("/invalid_fields.json").getPath();
+
 
         List<BankAccount> bankAccounts = org.bank.parsing.JSONBankAccountParser.parseJSON2BankAccountList2(filePath);
 
@@ -43,7 +45,7 @@ public class JSONBankAccountParserTest {
 
     @Test(expected = IOException.class)
     public void testNotFoundFileException() {
-        String filePath = "C:\\internship\\bank-java-project\\src\\test\\resources\\not_created_file.json";
+        String filePath = "/not_created_file.json";
         List<BankAccount> bankAccounts = org.bank.parsing.JSONBankAccountParser.parseJSON2BankAccountList2(filePath);
 
     }

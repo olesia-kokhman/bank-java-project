@@ -5,30 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e3426aa-e1b8-4bb1-a90e-ff990da484ee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/bank/core/BankAccountFilesExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/file-0.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/file-1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/file-2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/file-3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/file-4.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/file-5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/file-6.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/file-7.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/file-8.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/file-9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/JSONBankAccountParserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/StatisticsGeneratorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/invalid_fields.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/missing_fields.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/not_json_file.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/core/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/core/BankAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/parsing/JSONBankAccountParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/parsing/JSONBankAccountParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/StatisticsData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/StatisticsData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/StatisticsGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/StatisticsGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/XMLStatisticsParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/XMLStatisticsParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/StatisticsItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bank/statistics_generation/StatisticsItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/statistics_by_currency.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/JSONBankAccountParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JSONBankAccountParserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +136,7 @@
       <workItem from="1713297324195" duration="15178000" />
       <workItem from="1713375619004" duration="26471000" />
       <workItem from="1713442345781" duration="20164000" />
-      <workItem from="1713464726965" duration="6325000" />
+      <workItem from="1713464726965" duration="7834000" />
     </task>
     <servers />
   </component>
